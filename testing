@@ -24,3 +24,31 @@ class shortpath(unittest.TestCase):
 
 if __name__ == '__main__':
    unittest.main()
+
+
+
+
+#recursive code test_two
+
+import sys
+import itertools
+import unittest
+
+from recursion import shortest_pathway
+from recursion import floyd
+
+#Testing incorrect input graph against unittest assert
+
+class recursion_testing(unittest.TestCase):
+
+    def test_overload(self):
+        NO_PATH = sys.maxsize
+        graph = [[NO_PATH, NO_PATH, NO_PATH, NO_PATH],
+                 [NO_PATH, NO_PATH, NO_PATH, NO_PATH],
+                 [NO_PATH, NO_PATH, NO_PATH, NO_PATH],
+                 [NO_PATH, NO_PATH, NO_PATH, NO_PATH]] 
+        x = shortest_pathway(1, 1, 1,graph)
+        self.assertEqual(x, 1)
+        
+if __name__ == '__main__':
+    unittest.main()

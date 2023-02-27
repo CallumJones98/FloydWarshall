@@ -11,6 +11,8 @@ from recursion import floyd
 
 #defined class 
 
+#testing fct for shortest_pathway
+
 class shortpath(unittest.TestCase):
 
     def test_one(self):
@@ -39,6 +41,7 @@ from recursion import shortest_pathway
 from recursion import floyd
 
 #Testing incorrect input graph against unittest assert
+#inputting no_path for all input on matrix graph to compare to shortest pathway which is incorrect
 
 class recursion_testing(unittest.TestCase):
 
@@ -71,7 +74,10 @@ from recursion import floyd
 # testing assert equal
 
 # defined class for floyd Warshall
-# Finding shortest graph through fct
+
+# tinding shortest graph through fct
+
+# testing fct for floyd distance
 
 
 class floyd_warshall(unittest.TestCase):

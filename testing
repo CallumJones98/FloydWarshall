@@ -28,6 +28,7 @@ if __name__ == '__main__':
 
 
 
+
 #recursive code test_two
 
 import sys
@@ -50,5 +51,39 @@ class recursion_testing(unittest.TestCase):
         x = shortest_pathway(1, 1, 1,graph)
         self.assertEqual(x, 1)
         
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
+
+
+# recursive code test_three
+
+import sys
+import itertools
+import unittest
+
+from recursion import shortest_pathway
+from recursion import floyd
+
+# testing assert equal
+
+# defined class for floyd Warshall
+# Finding shortest graph through fct
+
+
+class floyd_warshall(unittest.TestCase):
+
+    def test_three(self):
+        NO_PATH = sys.maxsize
+        graph = [[0, 7, NO_PATH, 8],
+                 [NO_PATH, 0, 5, NO_PATH],
+                 [NO_PATH, NO_PATH, 0, 2],
+                 [NO_PATH, NO_PATH, NO_PATH, 0]]
+        shortest = [NO_PATH, NO_PATH, NO_PATH, 0]
+        self.assertEqual(shortest, graph)
+
 if __name__ == '__main__':
     unittest.main()

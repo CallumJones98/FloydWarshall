@@ -7,17 +7,20 @@ import unittest
 from recursion import shortest_pathway
 from recursion import floyd
 
-#testing assert equal a == b
+#testing assert equal e.g. a == b
 
 #defined class 
 
-class ShortPath(unittest.TestCase):
-  
-  def test_short(self):
-      NO_PATH = sys.maxsize
-      graph = [[0, 7, NO_PATH, 8],
-         [NO_PATH, 0, 5, NO_PATH],
-         [NO_PATH, NO_PATH, 0, 2],
-         [NO_PATH, NO_PATH, NO_PATH, 0]]
-      testshort = shortest_pathway(0,7,8)
-      self.assertEqual(testshort)
+class shortpath(unittest.TestCase):
+
+    def test_one(self):
+        NO_PATH = sys.maxsize
+        graph = [[0, 7, NO_PATH, 8],
+                 [NO_PATH, 0, 5, NO_PATH],
+                 [NO_PATH, NO_PATH, 0, 2],
+                 [NO_PATH, NO_PATH, NO_PATH, 0]]
+        feedback = shortest_pathway(0, 0, 8, graph)
+        self.assertEqual(feedback, 8)
+
+if __name__ == '__main__':
+   unittest.main()

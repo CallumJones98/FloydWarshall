@@ -13,14 +13,10 @@ MAX_LENGTH = len(graph[0])
 
 # Function to calculate the shortest pathway
 def shortest_pathway(start_node, intermediate, end_node, distance):
-    # Function will return the minimum pathway through start node, intermediate nodes, and end node. 
+    # Function will return the minimum pathway through start node, intermediate nodes, and end node.
     # This will return shortest point of starting node, intermediate node and end node
     if 0 >= intermediate:
-        # Testing all intermediate nodes 
-        # -1 to represent NO_PATH 
-        return min(shortest_pathway(start_node, intermediate - 1, end_node, distance),
-                   shortest_pathway(start_node, intermediate - 1, intermediate, distance) +
-                   shortest_pathway(end_node, intermediate, intermediate - 1, distance))
+         return min(distance[start_node][end_node] == min(distance[start_node][end_node], distance[start_node][intermediate] + distance[intermediate][end_node]))
     # Base Case that removes NO_PATH
     else:
         return (distance[start_node][end_node])
